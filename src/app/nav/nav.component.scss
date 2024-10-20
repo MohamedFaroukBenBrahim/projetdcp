@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mainclass{
+    display: flex;
+    flex-direction: row;
+    color: rgb(23, 22, 22);
+    justify-content: space-between;
+    .mainlogo{
+        float: left;
+        img{
+            width: 150px;
+            height: 40px;
+        }
+    }
+    .mainname{
+        color:rgb(255, 255, 255);
+        margin-bottom: 5px;
+        font-size: xx-large;
+    }
+    .navcontent{
+        ul{
+            display: flex;
+            flex-direction: row;
+            margin-left: 250px;
+            li{
+                margin: 10px;
+                list-style: none;
+                padding: 0 15px;
+                font-weight: bold;
+            }
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                transition:1s;
+            }
+            a:hover{
+                text-decoration: underline;
+                color:#1c1c84;
+            }
+        }
+    }
+    .buttons{
+        button{
+            background-color: rgb(255, 255, 255);
+            border-color: gray;
+            border-radius: 0px ;
+            float: right;
+            box-shadow: 5px 5px 3px 1px;
+            cursor: pointer;
+            transition: 1s;
+            padding: 2px;
+            margin: 5px;
+            img{
+                width: 20px;
+            }
+        }
+        button:hover{
+            background-color: rgb(113, 109, 109);
+            border:white;
+            box-shadow: 0px 0px 0px 0px;
+        }
+    }
+    .search{
+        box-sizing: border-box;
+        padding-top: 5px;
+        input{
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            padding: 10px;
+            font-size: 17px;
+        }
+        button{
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #e75f5f;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #a43838;
+        }
+    }
+    .search::after{
+        content: "";
+        clear: both;
+        display: ta;
+    }
+}
