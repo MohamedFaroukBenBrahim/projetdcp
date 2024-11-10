@@ -1,0 +1,41 @@
+.header__container{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+    overflow: hidden;
+    align-items: center;
+}
+img {
+    max-width: 600px;
+    margin-inline: auto; 
+    display: flex;
+    width: 100%;
+} 
+h1 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    color: #18181b;
+    text-align: left;
+}
+span {
+    color: #fc7f09;
+}
+p{
+    margin-bottom: 2rem;
+}
+.btn{
+    text-align: left;
+}
+button{
+    background-color: #fc7f09;
+    border:2px;
+    border-radius: 20px;
+    border-color: rgb(147, 139, 139);
+    padding: 10px;
+    cursor: pointer;
+}
+div {
+    font-family: "Poppins", sans-serif;
+}

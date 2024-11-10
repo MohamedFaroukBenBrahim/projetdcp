@@ -1,0 +1,53 @@
+.section__container {
+  background-color: #fffcfa;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 4rem 2rem;
+  padding: 2rem 1rem; 
+}
+.footer__logo {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem; 
+  a{
+    color: #fc7f09;
+    span{
+      color: #18181b;
+    }
+  }
+}
+
+.description {
+  text-align: left;
+  font-size: 0.95rem; 
+  color: #6b7280;
+}
+
+h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #18181b;
+}
+
+.links {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.links a {
+  color: #6b7280;
+  text-decoration: none; 
+}
+
+.links a:hover {
+  color: #fc7f09;
+}
+
+.bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+  border-top: 1px solid #e0e0e0; 
+}
