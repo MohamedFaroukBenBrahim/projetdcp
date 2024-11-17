@@ -9,6 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RecpiesComponent } from './recpies/recpies.component';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {path : "" ,component : WelcomeComponent},
   {path : "welcome" , component : WelcomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

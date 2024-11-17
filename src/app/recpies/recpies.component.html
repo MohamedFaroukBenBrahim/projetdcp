@@ -1,2 +1,20 @@
-<p>GAOSOOGANJSSOV</p>
-<H1>GAS</H1>
+<div class="Search">
+    <p>Enter Ingredients:</p>
+    <input type="text" [(ngModel)]="ingredients" class="Search" placeholder="comma-separated list" />
+    <button (click)="searchRecipes()"><i class="fa fa-search"></i></button>
+  </div>
+  <div *ngIf="recipes.length > 0">
+    <h3>Recipe Suggestions:</h3>
+    <div *ngFor="let recipe of recipes" class="all">
+      <div class="Suggestions">
+        <h2>{{ recipe.recipe_name }} </h2>
+        <p class="">Description :  {{recipe.description}}</p>
+        <p>- Ingredients: {{ recipe.ingredients }}</p>
+        <button >How to make</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="ingredients.length === 0" class="alert">
+    <p>Please enter at least one ingredient to search for recipes.</p>
+  </div>
+  
