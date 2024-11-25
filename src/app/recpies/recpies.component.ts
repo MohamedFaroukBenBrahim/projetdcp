@@ -7,30 +7,30 @@ import { RecipeService } from '../service/recipe.service';
   styleUrl: './recpies.component.scss'
 })
 export class RecpiesComponent {
-  ingredients: string = '';  // Store the user input
-  recipes: any[] = [];  // Store the fetched recipes
+  ingredients: string = ''; 
+  recipes: any[] = [];  
+  showPreparationSteps: { [key: number]: boolean } = {};
 
   constructor(private recipeService: RecipeService) {}
-
   searchRecipes() {
     if (!this.ingredients) {
       console.log('Please enter some ingredients');
-      return;  // Don't proceed if no ingredients are entered
+      return;  
     }
-    // Convert ingredients string into an array of individual ingredients
     const ingredientsArray = this.ingredients.split(',').map(ingredient => ingredient.trim());
-
     console.log('Searching recipes for:', ingredientsArray);
-    // Make the API call to get recipes
     this.recipeService.getRecipes(ingredientsArray).subscribe(
       (data: any) => {
-        console.log('Recipes received:', data);  // Log data
-        this.recipes = data;  // Store the recipes in the component
+        console.log('Recipes received:', data);  
+        this.recipes = data;
       },
       (error: any) => {
         console.error('Error fetching recipes:', error);
       }
+      
     );
   }
- 
-  }  
+  togglePreparationSteps(index: number) {
+    this.showPreparationSteps[index] = !this.showPreparationSteps[index];
+  }
+}  

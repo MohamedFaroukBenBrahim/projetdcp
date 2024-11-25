@@ -5,12 +5,23 @@
   </div>
   <div *ngIf="recipes.length > 0">
     <h3>Recipe Suggestions:</h3>
-    <div *ngFor="let recipe of recipes" class="all">
+    <div *ngFor="let recipe of recipes; let i = index"  class="all">
       <div class="Suggestions">
         <h2>{{ recipe.recipe_name }} </h2>
         <p class="">Description :  {{recipe.description}}</p>
         <p>- Ingredients: {{ recipe.ingredients }}</p>
-        <button >How to make</button>
+        <div *ngIf="recipe.preparations && recipe.preparations.length > 0">
+          <button (click)="togglePreparationSteps(i)" style="cursor: pointer;">
+            How to make
+          </button>
+          <div *ngIf="showPreparationSteps[i]">
+            <ul>
+              <li *ngFor="let step of recipe.preparations">
+                <strong>Step {{ step.step_number }}:</strong> {{ step.description }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
