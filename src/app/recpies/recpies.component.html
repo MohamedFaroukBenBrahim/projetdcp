@@ -4,7 +4,7 @@
     <button (click)="searchRecipes()"><i class="fa fa-search"></i></button>
   </div>
   <div *ngIf="recipes.length > 0">
-    <h3>Recipe Suggestions:</h3>
+    <h3>Recipe Suggestions :</h3>
     <div *ngFor="let recipe of recipes; let i = index"  class="all">
       <div class="Suggestions">
         <h2>{{ recipe.recipe_name }} </h2>
@@ -26,6 +26,6 @@
     </div>
   </div>
   <div *ngIf="ingredients.length === 0" class="alert">
-    <p>Please enter at least one ingredient to search for recipes.</p>
+    <p>Please Enter at least one ingredient to search for recipes.</p>
   </div>
   
